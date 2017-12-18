@@ -1,0 +1,69 @@
+.choose-bar{
+    border-bottom: 1px solid #eee;
+}
+
+.menu{
+    width: 128px;
+    height: 36px;
+    float: right;
+}
+
+.chanel-icon{
+    width: 1140px;
+}
+
+.video-list {
+    font-size: 0;
+}
+
+.video-list li{
+    display: inline-block;
+    margin: 20px 20px 0 0;
+    width: 260px;
+    height: 274px;
+    /*background-color: greenyellow;*/
+}
+
+.video-image{
+    display: inline-block;
+    width: 100%;
+    height: 162px;
+    /*background-color: pink;*/
+}
+
+.video-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.video-data{
+    display: block;
+    padding: 12px;
+    margin: 0 auto;
+    width: 100%;
+    height: 112px;
+    background-color: rgb(255,255,255);
+    /*background-color: deepskyblue;*/
+}
+
+
+.video-data p{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 16px;
+    height: 21px;
+    width: 100%;
+}
+
+.font_12{
+    font-size: 12px;
+}
+
+.video-view{
+    margin-bottom: 10px;
+}
+
+.user-info{
+    margin-top: 10px;
+}

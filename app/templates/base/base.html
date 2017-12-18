@@ -1,0 +1,42 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}首页{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+{% endblock %}
+{% block navbar %}
+    <header>
+        <a href="" class="logo"><img src="{{ url_for('static', filename='image/logo.jpeg') }}" alt="" class="logo"></a>
+        <ul class="nav-list">
+            <li><a href="" class="font_size_16">首页</a></li>
+            <li><a href="" class="font_size_16">发现</a></li>
+            <li><a href="" class="font_size_16">学院</a></li>
+            <li><a href="" class="font_size_16">素材</a></li>
+            <li><a href="" class="font_size_16">活动</a></li>
+            <li><a href="" class="font_size_16">更多</a></li>
+        </ul>
+        <div class="right">
+            <ul>
+                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href="" class="font_size_16">登录</a></li>
+                <li><a href="" class="font_size_16">注册</a></li>
+            </ul>
+        </div>
+    </header>
+{% endblock %}
+{% block content %}
+    <div class="content">
+        <a href="" class="banner"><img src="{{ url_for('static', filename='image/2.jpg') }}" alt=""></a>
+        {% block page_content %}
+
+        {% endblock %}
+    </div>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

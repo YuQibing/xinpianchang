@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+{% block page_content %}
+    <div class="choose-bar">
+        <span class="font_size_16">全部作品</span>
+        <div class="menu">
+            <a href="" class="font_size_16">热门</a>
+            <i>/</i>
+            <a href="" class="font_size_16">最新</a>
+            <i>/</i>
+            <a href="" class="font_size_16">精选</a>
+        </div>
+    </div>
+    <div class="chanel-icon">
+            <ul class="video-list">
+                {% for i in range(10) %}
+                    <li class="video-one">
+                        <a class="video-image" href=""><img src="{{ url_for('static', filename='image/jay.jpg') }}" alt=""></a>
+                        <div class="video-data">
+                            <a href="{{ url_for('home.detail') }}"><p class="video-title">周杰伦的2000w个故事之《最长的电影》</p></a>
+                            <div class="video-view">
+                                <span class="font_12">播放 6666</span>
+                                <span class="font_">   |   </span>
+                                <span class="font_12">喜欢 6666</span>
+                            </div>
+                            <div class="user-info">
+                                <span class="font_12">周杰伦   </span>
+                                <span class="font_12">  |  </span>
+
+                                <span class="font_12">导演</span>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+{% endblock %}
