@@ -1,13 +1,18 @@
 import requests
 from flask import make_response
 from flask import render_template
+from flask import request
+
 from . import home
 from app.models import Movies
 
 
 @home.route('/index/')
 def index():
-    return render_template('home/home.html')
+    page = request.args.get('page', 1, type=int)
+    pagination = Movies.query.paginate(page, per_page=16, error_out=False)
+    movies = pagination.items
+    return render_template('home/home.html', pagination=pagination, movies=movies)
 
 
 @home.route('/detail/', methods=['GET', 'POST'])
@@ -25,3 +30,4 @@ def handler():
     response = make_response(r.content)
     # r.headers['Content-Type'] = 'video/mp4'
     return response
+

@@ -58,6 +58,14 @@
 
 .font_12{
     font-size: 12px;
+    font-weight: 400;
+    color: #999999;
+}
+
+.views{
+    color: gray;
+    font-weight: 400;
+    margin-right: 5px;
 }
 
 .video-view{
@@ -66,4 +74,24 @@
 
 .user-info{
     margin-top: 10px;
+    height: 24px;
+    display: flex;
+    flex-flow: nowrap;
 }
+
+.user-info .user{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.vocation{
+    padding-left: 20px;
+
+
+}
+
+
+
+
