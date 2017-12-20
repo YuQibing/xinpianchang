@@ -20,7 +20,7 @@
                 <li class="video-one">
                     <a class="video-image" href=""><img src="{{ movie.image_url }}" alt=""></a>
                     <div class="video-data">
-                        <a href="{{ url_for('home.detail') }}"><p class="video-title">{{ movie.title }}</p></a>
+                        <a href="{{ url_for('home.detail', title=movie.title)  }}"><p class="video-title">{{ movie.title }}</p></a>
                         <div class="video-view">
                             <span class="font_12"><span class="views">播放</span> {{ movie.views }}</span>
                             <span class="views font_12">&nbsp;&nbsp;|&nbsp;</span>
@@ -31,9 +31,6 @@
                                 <a href="" class="font_12">{{ movie.auth }}</a>
                                 <a href="" class="vocation font_12">{{ movie.vocation }}</a>
                             </span>
-                            {#                            <span class="font_12">  |  </span>#}
-                            {##}
-                            {#                            <span class="font_12 vocation">{{ movie.vocation }}</span>#}
                         </div>
                     </div>
                 </li>

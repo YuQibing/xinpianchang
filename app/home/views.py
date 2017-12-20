@@ -2,9 +2,11 @@ import requests
 from flask import make_response
 from flask import render_template
 from flask import request
-
-from . import home
 from app.models import Movies
+from flask import Blueprint
+
+# 创建前端home蓝本对象
+home = Blueprint('home', __name__)
 
 
 @home.route('/index/')
@@ -30,4 +32,3 @@ def handler():
     response = make_response(r.content)
     # r.headers['Content-Type'] = 'video/mp4'
     return response
-
